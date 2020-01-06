@@ -8,7 +8,7 @@ export default props => {
   const [date, setDate] = useState(new Date().toISOString())
 
   const handleChangeAmount = e => {
-    setAmount(parseInt(e.target.value), 10)
+    setAmount(parseInt(e.target.value, 10))
   }
 
   const handleChangeCategory = e => {
