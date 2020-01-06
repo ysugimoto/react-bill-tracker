@@ -8,7 +8,10 @@ export default props => {
   const [date, setDate] = useState(new Date().toISOString())
 
   const handleChangeAmount = e => {
-    setAmount(parseInt(e.target.value, 10))
+    const value = parseInt(e.target.value, 10)
+    if (!Number.isNaN(value)) {
+      setAmount(value)
+    }
   }
 
   const handleChangeCategory = e => {
